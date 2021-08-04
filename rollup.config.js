@@ -68,7 +68,7 @@ if (isDev) {
 }
 
 export default {
-  input: path.resolve(__dirname, 'src/index.js'),
+  input: path.resolve(__dirname, 'src/index.jsx'),
   plugins,
   output: {
     file: path.resolve(__dirname, 'dist/bundle.js'),
