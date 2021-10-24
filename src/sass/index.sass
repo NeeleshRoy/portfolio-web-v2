@@ -1,4 +1,94 @@
 @import "./reset"
+@import "./colors"
+@import "./fonts"
+
+*,
+*:after,
+*:before
+    box-sizing: border-box
 
 body
-    background: skyblue
+    background: $brand-black
+    font-size: $font-size-regular
+    color: $pure-white
+    font-family: $font-family-sans
+
+.container
+    margin-left: auto
+    margin-right: auto
+    padding: 0 15px
+    @media screen and (min-width: 768px)
+        width: 750px
+    @media screen and (min-width: 992px)
+        width: 970px
+    @media screen and (min-width: 1200px)
+        width: 1170px
+
+nav
+    display: grid
+    grid-template-columns: 4fr 2fr
+    align-items: center
+    justify-content: flex-start
+    .logo
+        margin-top: 10px
+        img
+            max-width: 250px
+    ul
+        display: flex
+        justify-content: space-around
+        li
+            list-style-type: none
+            a
+                color: $pure-white
+                font-size: $font-size-big
+                display: block
+                padding: 10px
+                text-decoration: none
+                transition: all 0.6s
+                border-radius: 5px
+                &:hover
+                    background: $happy-green
+.highlight-1
+    padding: 0 4px
+    color: $happy-green
+
+.highlight-2
+    padding: 0 4px
+    color: $marsh-yellow
+
+.highlight-3
+    padding: 0 4px
+    color: $bubbly-pink
+
+.button-cta
+    text-decoration: none
+    color: $pure-white
+    background: $highlight-blue
+    padding: 10px 20px
+    transition: background 0.4s
+    &:hover
+        background: $happy-green
+    &::after
+        content: "→"
+
+.home
+    .hero
+        font-family: $font-family-serif
+        font-size: 4.4em
+        margin-top: 2em
+    ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        align-items: center
+        padding-left: 0
+        margin-bottom: 4em
+        li
+            list-style-type: none
+            font-size: $font-size-regular
+            padding: 5px
+            margin: 4px 4px 0 0
+            &:first-of-type
+                font-weight: 700
+                font-size: $font-size-big
+                margin-top: 0
