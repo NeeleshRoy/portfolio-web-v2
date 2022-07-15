@@ -1,12 +1,26 @@
 import React from 'react';
 import "../sass/index.sass";
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+  } from "react-router-dom";
 
-const App = () => {
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
+
+function App() {
   return (
-    <div>
-      Neelesh Roy - Portfolio V2
-    </div>
-  );
-};
+    <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='contact' element={<Contact />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+    </BrowserRouter>
+  )
+}
 
-export default App;
+export default App
