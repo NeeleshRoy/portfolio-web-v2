@@ -1,52 +1,6 @@
-@import "./reset"
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Space+Mono&display=swap')
-
-$base: #2943c0
-$highlight: #79f4e1
-$highlight-2: #c0289f
-$highlight-3: #b89897
-$white: #FFFFFF
-$black: #161616
-
-@mixin font-body
-    font-family: 'Space Mono', monospace
-
-@mixin font-headings
-    font-family: 'Montserrat', sans-serif
-
-@keyframes animate-circle
-    from
-        width: 700px
-        height: 700px
-    to
-        width: 800px
-        height: 800px
-
-.home
-    background: $base
-    width: 100vw
-    height: 100vh
-    position: relative
-
-.circle
-    width: 600px
-    height: 600px
-    border-radius: 100%
-    background: $highlight-2
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-    animation: animate-circle 3s ease-in-out infinite alternate
-
-.hero-header
-    @include font-headings
-    font-size: 4em
-    color: $highlight
-    text-transform: uppercase
-    text-align: center
-    text-shadow: 8px 4px 0 $black
-    position: absolute
-    left: 50%
-    top: 45%
-    transform: translate(-50%, -50%)
+@import "./_reset"
+@import "./_variables"
+@import "./_mixins"
+@import "./_defaults"
+@import './home'
+@import './work'

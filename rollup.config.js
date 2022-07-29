@@ -13,12 +13,14 @@ import simplevars from 'postcss-simple-vars';
 import nested from 'postcss-nested';
 import cssnext from 'postcss-cssnext';
 import cssnano from 'cssnano';
+import css from "rollup-plugin-import-css";
 
 const dotenv = require('dotenv');
 
 const isProduction = process.env.BUILD === "production";
 const isDev = process.env.BUILD === "development";
 const plugins = [
+    css(),
     postcss({
         extensions: [".sass"],
         plugins:[
