@@ -1,0 +1,29 @@
+@mixin font-body
+    font-family: 'Space Mono', monospace
+
+@mixin font-headings
+    font-family: 'Montserrat', sans-serif
+
+@mixin button-primary
+    @include font-body
+    background: $hackergreen
+    color: $white
+    padding: 10px 20px
+    border: none
+    cursor: pointer
+    font-size: 16px
+    display: block
+    transition: background-color 0.5s
+    text-decoration: none
+    text-transform: lowercase
+    text-shadow: none
+    max-width: fit-content
+    animation: background 1s ease-in
+    &:hover
+        background: $darkgreen
+
+@mixin button-back
+    @include button-primary
+    position: fixed
+    top: 40px
+    left: 60px

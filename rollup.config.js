@@ -13,45 +13,46 @@ import simplevars from 'postcss-simple-vars';
 import nested from 'postcss-nested';
 import cssnext from 'postcss-cssnext';
 import cssnano from 'cssnano';
+import css from "rollup-plugin-import-css";
 
 const dotenv = require('dotenv');
 
 const isProduction = process.env.BUILD === 'production';
 const isDev = process.env.BUILD === 'development';
 const plugins = [
-  postcss({
-    extensions: ['.scss'],
-    plugins: [
-      simplevars(),
-      nested(),
-      cssnext({ warnForDuplicates: false }),
-      cssnano(),
-    ],
-  }),
-  replace({
-    'process.env.NODE_ENV': JSON.stringify(dotenv.config().parsed.NODE_ENV),
-    preventAssignment: true,
-  }),
-  nodeResolve({
-    extensions: ['.js', '.jsx'],
-  }),
-  json(),
-  babel({
-    exclude: 'node_modules/**',
-    babelHelpers: 'bundled',
-    envName: 'client',
-    configFile: path.resolve(__dirname, 'babel.config.js'),
-  }),
-  commonjs(),
-  isProduction && terser(),
-  copy({
-    targets: [
-      {
-        src: 'public/**/*',
-        dest: 'dist',
-      },
-    ],
-  }),
+    css(),
+    postcss({
+        extensions: [".sass"],
+        plugins:[
+            simplevars(),
+            nested(),
+            cssnext({ warnForDuplicates: false }),
+            cssnano()
+        ]
+    }),
+    replace({
+        'process.env.NODE_ENV': JSON.stringify(dotenv.config().parsed.NODE_ENV),
+        preventAssignment: true
+    }),
+    nodeResolve({
+        extensions: ['.js', '.jsx']
+    }),
+    json(),
+    babel({
+        exclude: "node_modules/**",
+        babelHelpers: "bundled",
+        envName: "client",
+        configFile: path.resolve(__dirname, "babel.config.js")
+    }),
+    commonjs(),
+    isProduction && terser(),
+    copy({
+        targets: [
+            { src: 'public/index.html', dest: 'dist' },
+        //   { src: ['assets/fonts/arial.woff', 'assets/fonts/arial.woff2'], dest: 'dist/public/fonts' },
+        //   { src: 'assets/images/**/*', dest: 'dist/public/images' }
+        ]
+    })
 ];
 
 if (isDev) {

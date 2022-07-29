@@ -1,0 +1,101 @@
+[
+    {
+        "position": "Senior Web Developer",
+        "company": "AKQA Media Pvt Ltd",
+        "date": "July 2022 - Present",
+        "client": "Van Cleef and Arpels",
+        "details": [
+            "Upgraded the DOTCOM analytics to Google analytics 4.0",
+            "Front end UX bugfixes"
+        ],
+        "links": [
+            {
+                "url": "https://www.vancleefarpels.com/",
+                "name": "Van Cleef & Arpels"
+            }
+        ]
+    },
+    {
+        "position": "Senior Web Developer",
+        "company": "AKQA Media Pvt Ltd",
+        "date": "November 2021 - July 2022",
+        "client": "British petroleum, Aral & Castrol",
+        "details": [
+            "Wrote Cypress tests to test Web components for all the three websites",
+            "Coded the improved recommendations UI for the global search",
+            "Created a Full stack dashboard application using react, node and mongo"
+        ],
+        "links": [
+            {
+                "url": "https://www.bp.com/",
+                "name": "British Petroleum"
+            },
+            {
+                "url": "https://www.castrol.com/en_gb/united-kingdom/home.html",
+                "name": "Castrol"
+            },
+            {
+                "url": "https://www.aral.de/",
+                "name": "Aral Germany"
+            }
+        ]
+    },
+    {
+        "position": "IT Analyst - Frontend",
+        "company": "Tata Consultancy Services",
+        "date": "December 2018 - November 2021",
+        "client": "Best Buy - United states",
+        "details": [
+            "Manage a react monorepo with lerna",
+            "Created a widget for marketing team to be used the in the homepage and deals of BestBuy US DOTCOM",
+            "Developed feature rich web video component for the business",
+            "Designed and implemented processes for cleanup of dev processes and improve developer experience",
+            "Delivered an average of 98% unit test coverage throughout the development of web components",
+            "Fixed existing and new bugs which significant improved the web experience, functionality and speed"
+        ],
+        "links": [
+            {
+                "url": "https://www.bestbuy.com/#?intl=nosplash",
+                "name": "Best Buy"
+            }
+        ]
+    },
+    {
+        "position": "CX analyst",
+        "company": "Tata Consultancy Services",
+        "date": "January 2017 - December 2018",
+        "client": "Best Buy - United States",
+        "details": [
+            "Developed A/B testing recipes for an experiment using javascript, optimizely web and other internal modular systems",
+            "Use adobe analytics and Optimizely’s result API to prepare experimentation results",
+            "Present new features and experiment results in product spotlight events"
+        ],
+        "links": [
+            {
+                "url": "https://www.bestbuy.com/#?intl=nosplash",
+                "name": "Best Buy"
+            }
+        ]
+    },
+    {
+        "position": "Frontend Developer",
+        "company": "Tata Consultancy Services",
+        "date": "August 2016 - January 2017",
+        "client": "Best Buy - United States",
+        "details": [
+            "Developed the front end of an appointment finder application that schedules product delivery, installations, repairs etc for the customers",
+            "Utilized third party APIs for booking service appointments",
+            "Backbone, Marionette, Grunt, Mocha, Chai, Sinon"
+        ],
+        "links": [
+            {
+                "url": "https://www.bestbuy.com/dossier/service/appointmentfinder",
+                "name": "Best Buy - Geek Squad"
+            },
+            {
+                "url": "https://engageware.com/appointment-scheduling/",
+                "name": "EngageWare - appointment API"
+            }
+        ]
+    }
+]
