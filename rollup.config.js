@@ -1,14 +1,14 @@
-import path from "path";
-import babel from "@rollup/plugin-babel";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import copy from 'rollup-plugin-copy'
-import replace from "@rollup/plugin-replace";
-import { terser } from "rollup-plugin-terser";
-import json from "@rollup/plugin-json";
-import serve from "rollup-plugin-serve";
-import livereload from "rollup-plugin-livereload";
-import postcss from "rollup-plugin-postcss";
+import path from 'path';
+import babel from '@rollup/plugin-babel';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import copy from 'rollup-plugin-copy';
+import replace from '@rollup/plugin-replace';
+import { terser } from 'rollup-plugin-terser';
+import json from '@rollup/plugin-json';
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
+import postcss from 'rollup-plugin-postcss';
 import simplevars from 'postcss-simple-vars';
 import nested from 'postcss-nested';
 import cssnext from 'postcss-cssnext';
@@ -17,8 +17,8 @@ import css from "rollup-plugin-import-css";
 
 const dotenv = require('dotenv');
 
-const isProduction = process.env.BUILD === "production";
-const isDev = process.env.BUILD === "development";
+const isProduction = process.env.BUILD === 'production';
+const isDev = process.env.BUILD === 'development';
 const plugins = [
     css(),
     postcss({
@@ -56,24 +56,24 @@ const plugins = [
 ];
 
 if (isDev) {
-    const serverOptions = {
-        open: true,
-        verbose: true,
-        contentBase: ["dist"],
-        historyApiFallback: true,
-        host: 'localhost',
-        port: 3000
-    };
-    plugins.push(serve(serverOptions));
-    plugins.push(livereload({ watch: 'dist' }));
+  const serverOptions = {
+    open: true,
+    verbose: true,
+    contentBase: ['dist'],
+    historyApiFallback: true,
+    host: 'localhost',
+    port: 3000,
+  };
+  plugins.push(serve(serverOptions));
+  plugins.push(livereload({ watch: 'dist' }));
 }
 
 export default {
-    input: path.resolve(__dirname, "src/index.js"),
-    plugins,
-    output: {
-        file: path.resolve(__dirname, "dist/bundle.js"),
-        format: "iife",
-        name: "bundle"
-    }
-}
+  input: path.resolve(__dirname, 'src/index.jsx'),
+  plugins,
+  output: {
+    file: path.resolve(__dirname, 'dist/bundle.js'),
+    format: 'iife',
+    name: 'bundle',
+  },
+};
