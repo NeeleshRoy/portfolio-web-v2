@@ -1,0 +1,51 @@
+.work
+    width: 100vw
+    height: 100%
+    background: $base
+    .timeline-area
+        max-width: 600px
+        margin: 0 auto
+        padding: 30px
+        border-left: 2px dashed $hackergreen
+        .timeline-card
+            background: $darkgreen
+            padding: 20px 30px
+            margin: 20px 30px
+            position: relative
+            color: $white
+            &::before
+                content: ''
+                display: block
+                width: 30px
+                height: 30px
+                border-radius: 50%
+                background-color: $white
+                border: 2px solid $base
+                position: absolute
+                left: -78px
+                top: 10px
+            h2
+                font-size: 16px
+
+            h3
+                font-size: 14px
+                text-transform: uppercase
+                letter-spacing: 3px
+                @include font-body
+
+            .timeline-card__details
+                li
+                    list-style-type: disc
+                    margin-bottom: 10px
+
+            .timeline-card__visitLinks
+                li
+                    list-style-type: none
+                    a
+                        text-decoration: none
+                        color: $link-color
+                        font-size: 13px
+                        &::after
+                            content: " →"
+                        &:hover
+                            color: $base
