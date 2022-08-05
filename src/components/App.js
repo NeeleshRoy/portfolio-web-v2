@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import "../sass/index.sass";
 import {
     BrowserRouter,
@@ -27,14 +26,3 @@ function App() {
 }
 
 export default App
-=======
-import '../sass/index.scss';
-
-const App = () => (
-  <div>
-    Neelesh Roy - Portfolio V2
-  </div>
-);
-
-export default App;
->>>>>>> f69ac8f3ed53d236e9916316409fc70bf95f19d1

@@ -27,7 +27,11 @@ function Work() {
                             {
                                 work.links.map(link => (
                                     <li>
+<<<<<<< HEAD
                                         <a href={link.url} target='_blank' rel="noreferrer">{link.name}</a>
+=======
+                                        <a href={link.url} target='_blank' >{link.name}</a>
+>>>>>>> f69ac8f3ed53d236e9916316409fc70bf95f19d1
                                     </li>
                                 ))
                             }

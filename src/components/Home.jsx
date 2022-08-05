@@ -36,6 +36,7 @@ function Home() {
               <div className="social">
                 <ul>
                   <li>
+<<<<<<< HEAD
                     <a href="https://www.linkedin.com/in/neeleshroy/" target='_blank' rel='noreferrer noopener' ><FaLinkedin /></a>
                   </li>
                   <li>
@@ -43,6 +44,15 @@ function Home() {
                   </li>
                   <li>
                     <a href="https://github.com/NeeleshRoy" target='_blank' rel='noreferrer noopener' ><FaGithub /></a>
+=======
+                    <a href="https://www.linkedin.com/in/neeleshroy/" target='_blank' ><FaLinkedin /></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/neel.bongo/" target='_blank' ><FaInstagramSquare /></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/NeeleshRoy" target='_blank' ><FaGithub /></a>
+>>>>>>> f69ac8f3ed53d236e9916316409fc70bf95f19d1
                   </li>
                   <li><button onClick={() => copyToClipBoard()}><FaEnvelope /></button></li>
                 </ul>
