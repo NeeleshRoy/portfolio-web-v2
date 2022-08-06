@@ -36,13 +36,13 @@ function Home() {
               <div className="social">
                 <ul>
                   <li>
-                    <a href="https://www.linkedin.com/in/neeleshroy/" target='_blank' ><FaLinkedin /></a>
+                    <a href="https://www.linkedin.com/in/neeleshroy/" target='_blank' rel='noreferrer noopener' ><FaLinkedin /></a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/neel.bongo/" target='_blank' ><FaInstagramSquare /></a>
+                    <a href="https://www.instagram.com/neel.bongo/" target='_blank' rel='noreferrer noopener' ><FaInstagramSquare /></a>
                   </li>
                   <li>
-                    <a href="https://github.com/NeeleshRoy" target='_blank' ><FaGithub /></a>
+                    <a href="https://github.com/NeeleshRoy" target='_blank' rel='noreferrer noopener' ><FaGithub /></a>
                   </li>
                   <li><button onClick={() => copyToClipBoard()}><FaEnvelope /></button></li>
                 </ul>
